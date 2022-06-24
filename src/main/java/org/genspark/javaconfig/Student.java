@@ -1,17 +1,16 @@
-package org.genspark.annotations;
+package org.genspark.javaconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-@PropertySource(value="classpath:input.properties")
 public class Student
 {
-    @Value("${id}")
+//    @Value("#{T(java.lang.Integer).parseInt('${id}')}")
+@Value("${id}")
     private int id;
     @Value("${name}")
     private String name;
