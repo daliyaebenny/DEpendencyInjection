@@ -1,4 +1,4 @@
-package org.genspark;
+package org.genspark.xml;
 
 public class Address {
 

@@ -1,4 +1,4 @@
-package org.genspark;
+package org.genspark.xml;
 
 import java.util.List;
 
@@ -41,4 +41,14 @@ public class Student
     }
 
 
+    public void show() {
+        System.out.println("id = "+ id +"\n"+"name = "+name+"\n"+"address = "+add.getCity()+","+add.getState()+","+add.getCountry()+","+add.getZipcode());
+        if(ph != null){
+            System.out.print("Phone = ");
+            for (Phone phone:ph){
+                System.out.print(phone.getMob()+ ",");
+            }
+        }
+
+    }
 }
