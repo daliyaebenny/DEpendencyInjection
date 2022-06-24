@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <bean id ="Address" class="org.genspark.xml.Address">
+        <property name = "city" value ="ABC"/>
+        <property name = "state" value ="DEF"/>
+        <property name = "country" value ="GHI"/>
+        <property name = "zipcode" value ="JKL"/>
+    </bean>
+    <bean id ="Phone1" class="org.genspark.xml.Phone">
+        <property name = "mob" value ="123456789"/>
+    </bean>
+    <bean id ="Phone2" class="org.genspark.xml.Phone">
+        <property name = "mob" value ="9876543210"/>
+    </bean>
+    <bean id ="Student" class="org.genspark.xml.Student">
+        <property name = "id" value ="1"/>
+        <property name = "name" value ="MNO"/>
+        <property name = "ph" >
+            <list>
+                <ref bean="Phone1" />
+                <ref bean="Phone2"/>
+            </list>
+        </property>
+        <property name = "add" ref ="Address"/>
+    </bean>
+
+
+</beans>
