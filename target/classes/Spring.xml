@@ -4,11 +4,13 @@
        xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <context:component-scan base-package="org.genspark.annotations"/>
+    <context:property-placeholder location="classpath:input.properties"/>
     <bean id ="Address" class="org.genspark.xml.Address">
-        <property name = "city" value ="ABC"/>
-        <property name = "state" value ="DEF"/>
-        <property name = "country" value ="GHI"/>
-        <property name = "zipcode" value ="JKL"/>
+        <property name = "city" value ="${address.city}"/>
+        <property name = "state" value ="${address.state}"/>
+        <property name = "country" value ="${address.country}"/>
+        <property name = "zipcode" value ="${address.zipcode}"/>
     </bean>
     <bean id ="Phone1" class="org.genspark.xml.Phone">
         <property name = "mob" value ="123456789"/>
@@ -17,8 +19,8 @@
         <property name = "mob" value ="9876543210"/>
     </bean>
     <bean id ="Student" class="org.genspark.xml.Student">
-        <property name = "id" value ="1"/>
-        <property name = "name" value ="MNO"/>
+        <property name = "id" value ="${id}"/>
+        <property name = "name" value ="${name}"/>
         <property name = "ph" >
             <list>
                 <ref bean="Phone1" />
