@@ -1,16 +1,14 @@
 # DependencyInjection
 Demonstration of DI using 3 types of spring container configurations-XML, Annotation and Java Config
 
-##Sample class 
+## Sample class 
 public class student
 {
-
    private int id;
    private String name;
    private List<Phone> ph;
    private Address add;
 }
-
 public class Phone
 {
 
